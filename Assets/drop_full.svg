@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="75" viewBox="0 0 50 75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #531261;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="UI">
+    <g id="single_blood_drops" data-name="single blood drops">
+      <g id="blood_drop" data-name="blood drop">
+        <path class="cls-1" d="M46.18,36.51h.09L25,0,3.73,36.51h.09a25,25,0,1,0,42.36,0Z"/>
+        <path class="cls-2" d="M5.58,49.52a1.25,1.25,0,0,1,2.43,0c2.74,10.86,7.22,14.59,10.87,16.4s4.55.9,4.55,1.81c0,.66-4.65.23-5.46,0-6.38-1.81-8-4.34-9.11-5.42C6.12,59.61,4.43,54.17,5.58,49.52Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

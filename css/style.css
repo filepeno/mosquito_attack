@@ -1,0 +1,1288 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+    background-color: #0e296d;
+    color: white;
+    font-size: 1.5vw;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.5vw;
+    padding: 2vw;
+    margin: 0;
+}
+
+li a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "game aside"
+        "fo fo";
+    grid-gap: 5vw;
+    grid-template-columns: 75% 1fr;
+}
+
+h1 {
+    margin: 1vw 2vw;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+aside {
+    grid-area: aside;
+    margin-right: 2vw;
+}
+
+#screen {
+    grid-area: game;
+    margin-left: 2vw;
+    position: relative;
+    width: 75vw;
+    height: 42.1875vw;
+    font-family: 'Amatic SC', cursive;
+    /*    font-weight: 700;*/
+    overflow: hidden;
+}
+
+#welcome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#start_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(../Assets/start_bg.svg);
+}
+
+#play_button {
+    position: absolute;
+    width: 8vw;
+    height: 7.5vw;
+    top: 24vw;
+    left: 35vw;
+    background-size: 100%;
+    background-image: url(../Assets/play_button.svg);
+}
+
+#play_button:hover {
+    transform: scale(1.1);
+}
+
+#play_button:active {
+    animation: clickButton 0.1s;
+}
+
+#instructions_button {
+    position: absolute;
+    width: 14vw;
+    height: 3vw;
+    top: 38vw;
+    left: 2vw;
+    background-size: 100%;
+    background-image: url(../Assets/instructions_button.svg);
+}
+
+#instructions_button:hover {
+    transform: scale(1.1);
+}
+
+#instructions_button:active {
+    animation: clickButton 0.1s;
+}
+
+#instructions {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(../Assets/instructions_bg_1.svg);
+}
+
+#instructions_grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-column-gap: 2vw;
+    grid-row-gap: 0.2vw;
+}
+
+#instructions_header {
+    position: relative;
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 3vw;
+    align-self: center;
+    justify-self: center;
+}
+
+#instructions_text {
+    position: relative;
+    grid-area: 2 / 2 / 3 / 3;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.6vw;
+}
+
+#back_home {
+    position: relative;
+    grid-area: 3 / 2 / 4 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+#home_button_0 {
+    position: absolute;
+    width: 8.5vw;
+    height: 6.6vw;
+    left: 33vw;
+    top: 34vw;
+    background-size: 100%;
+    background-image: url(../Assets/home_button.svg);
+}
+
+#home_button_0:hover {
+    transform: scale(1.1);
+}
+
+#home_button_0:active {
+    animation: clickButton 0.1s;
+}
+
+#game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#game_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(../Assets/game_bg.svg);
+}
+
+#sprites {
+    position: absolute;
+}
+
+
+#mosquito_container_1 {
+    position: absolute;
+}
+
+#mosquito_container_2 {
+    position: absolute;
+}
+
+#mosquito_container_3 {
+    position: absolute;
+}
+
+#mosquito_container_4 {
+    position: absolute;
+}
+
+#mosquito_container_5 {
+    position: absolute;
+}
+
+#mosquito_fly_l_1 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_l.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_l_2 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_l.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_l_3 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_l.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_r_4 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_r.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_r_5 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_r.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_r_6 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_r.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_dead_1 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_dead_2 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_dead_3 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_dead_4 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_dead_5 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_fly_dead_6 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_fly_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_suck {
+    position: absolute;
+    background-image: url(../Assets/mosquito_suck.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_1 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_2 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_3 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_4 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_5 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_6 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_dead_1 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_dead_2 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_dead_3 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_dead_4 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_dead_5 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#mosquito_full_dead_6 {
+    position: absolute;
+    background-image: url(../Assets/mosquito_full_dead.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#moth_container_1 {
+    position: absolute;
+}
+
+#moth {
+    position: absolute;
+    background-image: url(../Assets/moth.svg);
+    width: 5vw;
+    height: 5vw;
+    background-size: 100%;
+}
+
+#moth_dead {
+    position: absolute;
+    background-image: url(../Assets/moth_dead.svg);
+    width: 8vw;
+    height: 5.5vw;
+    background-size: 100%;
+}
+
+.pos_01 {
+    position: absolute;
+    transform: translate(89vw, 15vw);
+}
+
+.pos_1 {
+    position: absolute;
+    transform: translate(47vw, 23vw);
+}
+
+.mosq_move_l_1 {
+    animation: moveLeft_1 3s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_bg_1 {
+    animation: changeBg 3s linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.pos_02 {
+    position: absolute;
+    transform: translate(90vw, 15vw);
+}
+
+.pos_2 {
+    position: absolute;
+    transform: translate(38vw, 20vw);
+}
+
+.mosq_move_l_2 {
+    animation: moveLeft_2 3s linear;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_bg_2 {
+    animation: changeBg 3s linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.pos_03 {
+    position: absolute;
+    transform: translate(90vw, 28vw);
+}
+
+.pos_3 {
+    position: absolute;
+    transform: translate(52vw, 33vw);
+}
+
+.mosq_move_l_3 {
+    animation: moveLeft_3 3s linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_bg_3 {
+    animation: changeBg 3s linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.pos_04 {
+    position: absolute;
+    transform: translate(-10vw, 32vw);
+}
+
+.pos_4 {
+    position: absolute;
+    transform: translate(32vw, 28vw);
+}
+
+.mosq_move_r_4 {
+    animation: moveRight_1 3s linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_bg_4 {
+    animation: changeBg_r 3s linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.pos_05 {
+    position: absolute;
+    transform: translate(-10vw, 12vw);
+}
+
+.pos_5 {
+    position: absolute;
+    transform: translate(23vw, 32vw);
+}
+
+.mosq_move_r_5 {
+    animation: moveRight_2 3s linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_bg_5 {
+    animation: changeBg_r 3s linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.pos_06 {
+    position: absolute;
+    transform: translate(-10vw, 5vw);
+}
+
+.pos_6 {
+    position: absolute;
+    transform: translate(25vw, 21.5vw);
+}
+
+.mosq_move_r_6 {
+    animation: moveRight_3 3s linear;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_bg_6 {
+    animation: changeBg_r 3s linear;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.pos_0 {
+    position: absolute;
+    top: -2vw;
+    left: -8vw;
+}
+
+.moth_move_1 {
+    animation: moveBackAndForth_1 14s linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.moth_move_2 {
+    animation: moveBackAndForth_2 14s linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.moth_move_3 {
+    animation: moveBackAndForth_3 14s linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.moth_flip {
+    animation: flipX 14s linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fall_1 {
+    animation: fallDown 2s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeout_moth {
+    animation: fadeOut 2s linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.flicker_moth {
+    animation: flickerMoth 2s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeout_mosquito {
+    animation: fadeOut 2s linear;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.zoom_moth {
+    animation: zoomInFade 3s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.time_squeeze {
+    animation: squeezeY 45s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+/*Animations*/
+
+@keyframes moveLeft_1 {
+    0% {
+        transform: translate(89vw, 15vw);
+    }
+
+    10% {
+        transform: translate(74vw, 10vw);
+    }
+
+    20% {
+        transform: translate(68vw, 12vw);
+    }
+
+    30% {
+        transform: translate(60vw, 9vw);
+    }
+
+    40% {
+        transform: translate(52vw, 14vw);
+    }
+
+    50% {
+        transform: translate(47vw, 23vw);
+    }
+
+    100% {
+        transform: translate(47vw, 23vw);
+    }
+}
+
+@keyframes moveLeft_2 {
+    0% {
+        transform: translate(90vw, 15vw);
+    }
+
+    10% {
+        transform: translate(85vw, 10vw);
+    }
+
+    20% {
+        transform: translate(72vw, 7vw);
+    }
+
+    30% {
+        transform: translate(58vw, 5vw);
+    }
+
+    40% {
+        transform: translate(43vw, 12vw);
+    }
+
+    50% {
+        transform: translate(38vw, 20vw);
+    }
+
+    100% {
+        transform: translate(38vw, 20vw);
+    }
+}
+
+@keyframes moveLeft_3 {
+    0% {
+        transform: translate(90vw, 28vw);
+    }
+
+    10% {
+        transform: translate(85vw, 24vw);
+    }
+
+    20% {
+        transform: translate(72vw, 21vw);
+    }
+
+    30% {
+        transform: translate(62vw, 28vw);
+    }
+
+    40% {
+        transform: translate(57vw, 23vw);
+    }
+
+    50% {
+        transform: translate(52vw, 33vw);
+    }
+
+    100% {
+        transform: translate(52vw, 33vw);
+    }
+}
+
+@keyframes moveRight_1 {
+    0% {
+        transform: translate(-10vw, 32vw);
+    }
+
+    10% {
+        transform: translate(5vw, 21vw);
+    }
+
+    20% {
+        transform: translate(12vw, 26vw);
+    }
+
+    30% {
+        transform: translate(20vw, 28vw);
+    }
+
+    40% {
+        transform: translate(26vw, 21vw);
+    }
+
+    50% {
+        transform: translate(32vw, 28vw);
+    }
+
+    100% {
+        transform: translate(32vw, 28vw);
+    }
+}
+
+@keyframes moveRight_2 {
+    0% {
+        transform: translate(-10vw, 12vw);
+    }
+
+    10% {
+        transform: translate(7vw, 18vw);
+    }
+
+    20% {
+        transform: translate(5vw, 25vw);
+    }
+
+    30% {
+        transform: translate(9vw, 29vw);
+    }
+
+    40% {
+        transform: translate(14vw, 23vw);
+    }
+
+    50% {
+        transform: translate(23vw, 32vw);
+    }
+
+    100% {
+        transform: translate(23vw, 32vw);
+    }
+}
+
+@keyframes moveRight_3 {
+    0% {
+        transform: translate(-10vw, 5vw);
+    }
+
+    10% {
+        transform: translate(8vw, 3vw);
+    }
+
+    20% {
+        transform: translate(12vw, 8vw);
+    }
+
+    30% {
+        transform: translate(18vw, 6vw);
+    }
+
+    40% {
+        transform: translate(21vw, 15vw);
+    }
+
+    50% {
+        transform: translate(25vw, 21.5vw);
+    }
+
+    100% {
+        transform: translate(25vw, 21.5vw);
+    }
+}
+
+@keyframes moveBackAndForth_1 {
+    0% {
+        transform: translate(-5vw, 10vw);
+    }
+
+    10% {
+        transform: translate(20vw, 4vw);
+    }
+
+    20% {
+        transform: translate(45vw, 10vw);
+    }
+
+    30% {
+        transform: translate(70vw, -3vw);
+    }
+
+    40% {
+        transform: translate(90vw, -3vw);
+    }
+
+    60% {
+        transform: translate(90vw, 5vw);
+    }
+
+    70% {
+        transform: translate(72vw, 10vw);
+    }
+
+    80% {
+        transform: translate(46vw, 2vw);
+    }
+
+    90% {
+        transform: translate(23vw, 6vw);
+    }
+
+    100% {
+        transform: translate(-5vw, -2vw);
+    }
+}
+
+@keyframes moveBackAndForth_2 {
+    0% {
+        transform: translate(-5vw, 20vw);
+    }
+
+    10% {
+        transform: translate(20vw, 15vw);
+    }
+
+    20% {
+        transform: translate(45vw, 22vw);
+    }
+
+    30% {
+        transform: translate(70vw, 16vw);
+    }
+
+    40% {
+        transform: translate(90vw, 20vw);
+    }
+
+    60% {
+        transform: translate(90vw, 22vw);
+    }
+
+    70% {
+        transform: translate(72vw, 20vw);
+    }
+
+    80% {
+        transform: translate(46vw, 15vw);
+    }
+
+    90% {
+        transform: translate(23vw, 10vw);
+    }
+
+    100% {
+        transform: translate(-5vw, 18vw);
+    }
+}
+
+@keyframes moveBackAndForth_3 {
+    0% {
+        transform: translate(-5vw, 16vw);
+    }
+
+    10% {
+        transform: translate(21vw, 8vw);
+    }
+
+    20% {
+        transform: translate(44vw, 14vw);
+    }
+
+    30% {
+        transform: translate(70vw, 7vw);
+    }
+
+    40% {
+        transform: translate(90vw, 12vw);
+    }
+
+    60% {
+        transform: translate(90vw, 18vw);
+    }
+
+    70% {
+        transform: translate(72vw, 14vw);
+    }
+
+    80% {
+        transform: translate(46vw, 19vw);
+    }
+
+    90% {
+        transform: translate(23vw, 24vw);
+    }
+
+    100% {
+        transform: translate(-5vw, 19vw);
+    }
+}
+
+@keyframes flipX {
+    50% {
+        transform: scaleX(1);
+    }
+
+    51% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        transform: scaleX(-1);
+    }
+}
+
+
+@keyframes fallDown {
+    to {
+        transform: translateY(70vw);
+    }
+}
+
+@keyframes zoomInFade {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+        opacity: 0%;
+    }
+}
+
+
+@keyframes changeBg {
+    49.9% {
+        background-image: url(../Assets/mosquito_fly_l.svg);
+    }
+
+    50% {
+        background-image: url(../Assets/mosquito_suck.svg);
+    }
+
+    100% {
+        background-image: url(../Assets/mosquito_suck.svg);
+    }
+}
+
+@keyframes changeBg_r {
+    49.9% {
+        background-image: url(../Assets/mosquito_fly_r.svg);
+    }
+
+    50% {
+        background-image: url(../Assets/mosquito_suck.svg);
+    }
+
+    100% {
+        background-image: url(../Assets/mosquito_suck.svg);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes squeezeY {
+    to {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes clickButton {
+    0% {
+        transform: scale(1.1)
+    }
+
+    25% {
+        transform: scale(1.1)
+    }
+
+    50% {
+        transform: scale(0.9)
+    }
+
+    75% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1.1)
+    }
+}
+
+/*UI*/
+
+#UI_top_bar {
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.8vw;
+    pointer-events: none;
+}
+
+#time {
+    width: 6vw;
+    margin-left: 1vw;
+}
+
+#time_full {
+    position: absolute;
+    width: 2vw;
+    height: 9.2vw;
+    background-image: url(../Assets/time_full.svg);
+    background-size: 100%;
+    transform-origin: bottom center;
+}
+
+#time_frame {
+    position: absolute;
+    width: 2vw;
+    height: 9.3vw;
+    background-image: url(../Assets/time_frame.svg);
+    background-size: 100%;
+}
+
+#time_seconds {
+    position: absolute;
+    font-size: 2vw;
+    width: 6vw;
+    text-align: right;
+}
+
+#score {
+    display: flex;
+    width: 3.5vw;
+    justify-content: space-between;
+}
+
+#score_number {
+    font-size: 2vw;
+    width: 6vw;
+}
+
+#score_symbol {
+    width: 7vw;
+    height: 2.5vw;
+    background-image: url(../Assets/score.svg);
+    background-size: 100%;
+}
+
+#health {
+    display: flex;
+    padding-right: 1vw;
+    width: 10.4vw;
+    justify-content: space-around;
+}
+
+#blood_drop_1 {}
+
+#blood_drop_2 {}
+
+#blood_drop_3 {}
+
+#blood_drop_4 {}
+
+#blood_drop_5 {}
+
+.drop_full {
+    width: 1.5vw;
+    height: 2.25vw;
+    background-image: url(../Assets/drop_full.svg);
+    background-size: 100%;
+}
+
+.drop_empty {
+    width: 1.5vw;
+    height: 2.25vw;
+    background-image: url(../Assets/drop_empty.svg);
+    background-size: 100%;
+}
+
+#mute_unmute {
+    position: absolute;
+}
+
+#mute_button {
+    position: absolute;
+    top: 39.5vw;
+    left: 72vw;
+    width: 2vw;
+    height: 2vw;
+    background-image: url(../Assets/mute_button.svg);
+    background-size: 100%;
+}
+
+#unmute_button {
+    position: absolute;
+    top: 39.5vw;
+    left: 72vw;
+    width: 2vw;
+    height: 2vw;
+    background-image: url(../Assets/unmute_button.svg);
+    background-size: 100%;
+}
+
+/*UI ends*/
+
+#game_win {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#win_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(../Assets/win_bg.svg);
+}
+
+#score_final {
+    position: absolute;
+    font-size: 2.5vw;
+    width: 3vw;
+    top: 18.2vw;
+    left: 37.8vw;
+}
+
+#game_over {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#game_over_bg_1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(../Assets/game_over_bg_1.svg);
+}
+
+#game_over_bg_2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(../Assets/game_over_bg_2.svg);
+}
+
+#replay_button_1 {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    top: 30vw;
+    left: 24vw;
+    background-size: 100%;
+    background-image: url(../Assets/replay_button.svg);
+}
+
+#replay_button_1:hover,
+#replay_button_2:hover,
+#home_button_1:hover,
+#home_button_2:hover {
+    transform: scale(1.1);
+}
+
+#replay_button_1:active,
+#replay_button_2:active,
+#home_button_1:active,
+#home_button_2:active {
+    animation: clickButton 0.1s;
+}
+
+#replay_button_2 {
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    top: 30vw;
+    left: 24vw;
+    background-size: 100%;
+    background-image: url(../Assets/replay_button.svg);
+}
+
+#home_button_1 {
+    position: absolute;
+    width: 8.5vw;
+    height: 6.6vw;
+    top: 30vw;
+    left: 45vw;
+    background-size: 100%;
+    background-image: url(../Assets/home_button.svg);
+}
+
+#home_button_2 {
+    position: absolute;
+    width: 8.5vw;
+    height: 6.6vw;
+    top: 30vw;
+    left: 45vw;
+    background-size: 100%;
+    background-image: url(../Assets/home_button.svg);
+}
+
+footer {
+    grid-area: fo;
+    margin: 0 2vw;
+}
+
+@media screen and (max-width: 470px) {
+    main {
+        display: grid;
+        grid-template-areas: "game"
+            "aside"
+            "fo";
+    }
+    
+    #screen {
+        width: 95vw;
+        height: 53.4375vw;
+        align-content: center;
+    }
+    
+    #aside {
+        align-content: center;
+    }
+    
+    footer {
+        align-content: center; 
+    }
+}

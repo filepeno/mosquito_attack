@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosquito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav id="globalNav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="screen">
+            <div id="welcome" class="hidden">
+                <div id="start_bg">
+                </div>
+                <div id="play_button"></div>
+                <div id="instructions_button"></div>
+            </div>
+            <div id="instructions" class="hidden">
+                <div id="instructions_grid">
+                    <div id="instructions_header">
+                        <h1>INSTRUCTIONS</h1>
+                    </div>
+                    <div id="instructions_text">
+                        <p>You are out in the wilderness camping when nature calls, so you come out of your tent - and get attacked by a blood-thirsty swarm of mosquitoes! Kill as many mosquitoes as you can by clicking on them before they suck your blood but don't kill the moth! If you finish your business before mosqutoes eat you alive - you win.</p>
+                    </div>
+                    <div id="back_home">
+                        <h3>Back to home:</h3>
+                    </div>
+                </div>
+                <div id="home_button_0">
+                </div>
+            </div>
+            <div id="game" class="hidden">
+                <div id="game_bg"></div>
+                <div id="sprites">
+                    <div id="mosquito_container_1">
+                        <div id="mosquito_fly_l_1">
+                        </div>
+                        <div id="mosquito_fly_dead_1" class="hidden">
+                        </div>
+                        <div id="mosquito_full_1" class="hidden">
+                        </div>
+                        <div id="mosquito_full_dead_1" class="hidden">
+                        </div>
+                        <audio id="mosquito_fly_sfx_1" src="sound/mosquito_fly_sfx_1.mp3"></audio>
+                    </div>
+                    <div id="mosquito_container_2">
+                        <div id="mosquito_fly_l_2">
+                        </div>
+                        <div id="mosquito_fly_dead_2" class="hidden">
+                        </div>
+                        <div id="mosquito_full_2" class="hidden">
+                        </div>
+                        <div id="mosquito_full_dead_2" class="hidden">
+                        </div>
+                        <audio id="mosquito_fly_sfx_2" src="sound/mosquito_fly_sfx_2.mp3"></audio>
+                    </div>
+                    <div id="mosquito_container_3">
+                        <div id="mosquito_fly_l_3">
+                        </div>
+                        <div id="mosquito_fly_dead_3" class="hidden">
+                        </div>
+                        <div id="mosquito_full_3" class="hidden">
+                        </div>
+                        <div id="mosquito_full_dead_3" class="hidden">
+                        </div>
+                    </div>
+                    <div id="mosquito_container_4">
+                        <div id="mosquito_fly_r_4">
+                        </div>
+                        <div id="mosquito_fly_dead_4" class="hidden">
+                        </div>
+                        <div id="mosquito_full_4" class="hidden">
+                        </div>
+                        <div id="mosquito_full_dead_4" class="hidden">
+                        </div>
+                    </div>
+                    <div id="mosquito_container_5">
+                        <div id="mosquito_fly_r_5">
+                        </div>
+                        <div id="mosquito_fly_dead_5" class="hidden">
+                        </div>
+                        <div id="mosquito_full_5" class="hidden">
+                        </div>
+                        <div id="mosquito_full_dead_5" class="hidden">
+                        </div>
+                    </div>
+                    <div id="mosquito_container_6">
+                        <div id="mosquito_fly_r_6">
+                        </div>
+                        <div id="mosquito_fly_dead_6" class="hidden">
+                        </div>
+                        <div id="mosquito_full_6" class="hidden">
+                        </div>
+                        <div id="mosquito_full_dead_6" class="hidden">
+                        </div>
+                    </div>
+                    <div id="moth_container_1">
+                        <div id="moth"></div>
+                        <div id="moth_dead" class="hidden"></div>
+                    </div>
+                </div>
+                <div id="UI">
+                    <div id="UI_top_bar">
+                        <div id="time">
+                            <div id="time_full">
+                            </div>
+                            <div id="time_frame">
+                            </div>
+                            <div id="time_seconds">
+                            </div>
+                        </div>
+                        <div id="score">
+                            <div id="score_number">
+                            </div>
+                            <div id="score_symbol"></div>
+                        </div>
+                        <div id="health">
+                            <div id="blood_drop_5" class="drop_full">
+                            </div>
+                            <div id="blood_drop_4" class="drop_full">
+                            </div>
+                            <div id="blood_drop_3" class="drop_full">
+                            </div>
+                            <div id="blood_drop_2" class="drop_full">
+                            </div>
+                            <div id="blood_drop_1" class="drop_full">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mute_unmute">
+                        <div id="mute_button">
+                        </div>
+                        <div id="unmute_button" class="hidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="game_win" class="hidden">
+                <div id="win_bg"></div>
+                <div id="score_final"></div>
+                <div id="replay_button_1"></div>
+                <div id="home_button_1"></div>
+            </div>
+            <div id="game_over" class="hidden">
+                <div id="game_over_bg_1"></div>
+                <div id="game_over_bg_2" class="hidden"></div>
+                <div id="replay_button_2"></div>
+                <div id="home_button_2"></div>
+            </div>
+        </section>
+        <aside id="gameinfo">
+            <h2>Mosquito Attack</h2>
+            <p>A game where you have to be fast: kill all the mosquitoes and don't get bitten - but don't kill the moth!</p>
+        </aside>
+    </main>
+    <footer>
+        About us</footer>
+    <script src="javascript/mechanics.js"></script>
+</body></html>
